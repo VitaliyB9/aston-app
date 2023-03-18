@@ -4,7 +4,7 @@ import { getTodos } from "../../features/todos/todosSlice";
 import ButtonPost from "../buttons/ButtonPost";
 import TodosItem from "./TodosItem";
 
-const TodosList = ({title}) => {
+const TodosList = ({ title }) => {
   const dispatch = useDispatch();
 
   const todos = useSelector((state) => {
@@ -20,7 +20,7 @@ const TodosList = ({title}) => {
         Get Todos
       </ButtonPost>
       <h3>{title}</h3>
-      {todos?.map((todo) => (
+      {todos.map((todo) => (
         <TodosItem
           key={todo.title}
           todo={todo}
